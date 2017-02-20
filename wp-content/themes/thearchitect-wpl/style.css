@@ -7658,6 +7658,10 @@ div#respond-container #comments-title {
   color: #fff;
 }
 
+.footer .widget .textwidget p.adr {
+  margin-bottom: 0px;
+}
+
 .footer .widget .textwidget label {
   margin: 0 0 10px;
   color: #f47d28;
@@ -8682,5 +8686,31 @@ Stylesheet: Print Stylesheet
     border-bottom: solid 1px #959595;
     display: inline-block;
     padding-bottom: 10px;
+}
+
+.dotted_circle{
+    border: 2px dashed #f47d28;
+    padding: 2em;
+    height: 9em;
+    width: 9em;
+    border-radius: 7em;
+    text-align: center;
+    margin: 0em auto 0;
+    color: #fff;
+}
+.your_choise_list{
+    margin-bottom: 20px;
+}
+.your_choise_list div h5{
+    color: #f47d28;
+    text-align: center;
+    height: 5px;
+}
+.your_choise_list .choise_list{
+    margin-bottom: 10px;
+}
+.your_choise_list .choise_list div {
+    color: #fff;
+    text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
