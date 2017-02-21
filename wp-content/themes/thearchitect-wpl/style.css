@@ -71,6 +71,28 @@ template {
   display: none;
 }
 
+@font-face { 
+    font-family: 'MyriadPro-Regular'; 
+    src: url('font/MYRIADPRO-REGULAR.OTF') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+
+@font-face { 
+    font-family: 'MyriadPro-Light'; 
+    src: url('font/MYRIADPRO-LIGHT_0.OTF') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+
+
+@font-face {
+  font-family: 'MyriadPro-Semibold';
+  src: url('font/MYRIADPRO-SEMIBOLD.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -80,7 +102,7 @@ template {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: 'MyriadPro-Light', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -4856,7 +4878,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   -ms-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
-  border-radius: 3px;
+  border-radius: 6px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -4884,7 +4906,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 .btn.medium, .medium.accent-btn, input.medium[type="submit"], .comment-respond .medium#submit {
   font-size: 13px;
-  padding: 12px 24px;
+  padding: 5px 22px;
 }
 
 .btn.large, .large.accent-btn, input.large[type="submit"], .comment-respond .large#submit {
@@ -5881,7 +5903,7 @@ nav {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 1px;
   border-bottom: 4px solid transparent;
   transition: background-color .25s ease-in-out;
@@ -6723,32 +6745,33 @@ img {
 .module-title {
   padding-top: 72px;
   padding-bottom: 72px;
-  background: transparent url("assets/images/bg_line_diag.png") no-repeat 50% 0;
+  /*background: transparent url("assets/images/bg_line_diag.png") no-repeat 50% 0;*/
 }
 
 .module-title h3 {
-  font-size: 36px;
+  font-size: 1.3em;
   margin: 0 0 0.5em;
+  color: #f47d28;
 }
 
 .module-title p {
   color: #959595;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 16px;
   line-height: 36px;
   margin: 0 !important;
 }
 
 /* Filter */
 .filter {
-  padding: 42px 0 0;
+  padding: 0px 0 0;
   float: right;
 }
 
 .filter ul {
   position: relative;
   display: inline-block;
-  margin: 0 0 0 -5px;
+  margin: 0 0 0 5px;
   padding: 0;
   transition: background-color .25s ease-in-out;
   -moz-transition: background-color .25s ease-in-out;
@@ -6759,12 +6782,15 @@ img {
   display: block;
   white-space: nowrap;
   background: #959595;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+/*  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;*/
+  -webkit-border: 6px;
+/*  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;*/
+  -moz-border-radius: 6px;
+/*  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;*/
+  border-radius: 6px;
   transition: background-color .25s ease-in-out;
   -moz-transition: background-color .25s ease-in-out;
   -webkit-transition: background-color .25s ease-in-out;
@@ -6778,7 +6804,7 @@ img {
   letter-spacing: 1px;
   text-decoration: none;
   color: #ffffff;
-  padding: 14px 32px;
+  padding: 8px 32px;
 }
 
 .filter ul li span {
@@ -6786,7 +6812,7 @@ img {
   float: right;
   font-size: 17px;
   line-height: 32px;
-  top: 9px;
+  top: 4px;
   right: 15px;
   -webkit-transition: .1s ease-in-out;
   -moz-transition: .1s ease-in-out;
@@ -6817,7 +6843,7 @@ img {
   display: none;
   position: absolute;
   right: 0;
-  top: 52px;
+  top: 41px;
   overflow: hidden;
   width: 205px;
   float: none;
@@ -8148,7 +8174,7 @@ FlexSlider fit the look of the site
 }
 
 .flexslider {
-  margin: 0 0 0px;
+  margin: 0 0 20px;
   border: 0px solid #ffffff;
 }
 
@@ -8202,7 +8228,7 @@ FlexSlider fit the look of the site
 
 .flex-button a {
   padding: 10px 30px;
-  background: #fff;
+  background: #000;
   display: inline-block;
   border-radius: 3px;
 }
@@ -8689,7 +8715,7 @@ Stylesheet: Print Stylesheet
 }
 
 .dotted_circle{
-    border: 2px dashed #f47d28;
+    border: 2px dotted #f47d28;
     padding: 2em;
     height: 9em;
     width: 9em;

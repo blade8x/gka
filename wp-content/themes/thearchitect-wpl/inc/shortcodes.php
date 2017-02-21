@@ -58,7 +58,7 @@ if (!function_exists('shortcode_row')) {
             $html .= '<div class="row cf" style="' .$style. '">';
         }
             if($wrap != "false") {
-                $html .= '<div class="wrap">';
+                $html .= '<div class="wrap" style="' .$style. '">';
             }
             $html .= ' '.$content.' ';
             if($wrap != "false") {
@@ -1241,17 +1241,17 @@ if (!function_exists('shortcode_projects_list')) {
         // init variables
         $html = "";
         $root = ot_get_option('wpl_projects_page');
-        $browseall = __('Browse all', 'thearchitect-wpl');
+        $browseall = __('All Projects', 'thearchitect-wpl');
         $cattitle = __('By sectors', 'thearchitect-wpl');
 
         if ($title != "") {
 
-            $html .= "<div class='module-title wrap cf'>";
-                $html .= "<div class='one_half'>";
+            $html .= "<div class='module-title wrap cf' style='padding:0 0 20px 0;'>";
+                $html .= "<div class='two_third'>";
                     $html .= "<h3>$title</h3>";
                     if ($subtitle != "") { $html .= "<p>$subtitle</p>"; }
                 $html .= "</div>";
-                $html .= "<div class='one_half last'>";
+                $html .= "<div class='one_third last'>";
 
                 if ($filter != "false") {
 
