@@ -5714,7 +5714,7 @@ p.wrap {
   position: relative;
   float: left;
   padding: 0;
-  margin: 0 2% 0 0;
+  margin: 0 0 0 0;
 }
 
 .one_half {
@@ -5792,7 +5792,7 @@ a:link, a:visited:link {
 -------------------------------------------------------------- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-rendering: optimizelegibility;
-  color: #353535;
+  color: #f47d28;
   line-height: 1.333em;
 }
 
@@ -6678,6 +6678,14 @@ img {
   margin-right: 0;
 }
 
+.blog_content.shortcode.col-4 .hentry {
+  width: 23%;
+}
+
+.blog_content.shortcode.col-4 .hentry:nth-child(4n) {
+  margin-right: 0;
+}
+
 .blog_content .author_description {
   margin: 52px auto;
   padding: 32px 0 22px;
@@ -6771,7 +6779,7 @@ img {
 .filter ul {
   position: relative;
   display: inline-block;
-  margin: 0 0 0 5px;
+  /*margin: 0 0 0 5px;*/
   padding: 0;
   transition: background-color .25s ease-in-out;
   -moz-transition: background-color .25s ease-in-out;
@@ -7566,12 +7574,13 @@ div#respond-container #comments-title {
 }
 
 .footer .widget {
-  font-size: 14px;
+  font-size: 16px;
   vertical-align: top;
   display: inline-block;
   width: 25%;
   padding: 0;
   margin: 0;
+  text-align: left;
   /* widget title */
   /* list */
   /* rss */
@@ -7593,7 +7602,7 @@ div#respond-container #comments-title {
 
 @media only screen and (max-width: 768px) {
     .footer .widget:first-child {
-        width: 50%;
+        width: 100%;
     }
     .footer .widget:nth-child(2) {
         width: 50%;
@@ -7602,7 +7611,7 @@ div#respond-container #comments-title {
         width: 50%;
     }
     .footer .widget:nth-child(4) {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -7611,10 +7620,10 @@ div#respond-container #comments-title {
         width: 100%;
     }
     .footer .widget:nth-child(2) {
-        width: 100%;
+        width: 50%;
     }
     .footer .widget:nth-child(3) {
-        width: 100%;
+        width: 50%;
     }
     .footer .widget:nth-child(4) {
         width: 100%;
@@ -7625,6 +7634,7 @@ div#respond-container #comments-title {
   padding: 0;
   margin: 0;
   color: #f47d28;
+  font-family: MyriadPro-Semibold;
 }
 
 .footer .widget ul {
@@ -7691,6 +7701,8 @@ div#respond-container #comments-title {
 .footer .widget .textwidget label {
   margin: 0 0 10px;
   color: #f47d28;
+  font-size: 16px;
+  text-transform: none;
 }
 
 .footer .widget .textwidget a {
@@ -8319,11 +8331,11 @@ MEDIA QUERIES
   .two_third,
   .one_fourth,
   .three_fourth {
-    width: 48%;
+    width: 25%;
     margin-bottom: 2%;
   }
   .one_third {
-    width: 100%;
+    width: 50%;
     margin-bottom: 2%;
   }
   .archive-title,
@@ -8405,7 +8417,7 @@ MEDIA QUERIES
   .two_third,
   .one_fourth,
   .three_fourth {
-    width: 100%;
+    width: 50%;
     margin-bottom: 2%;
   }
   /* = BLOCK GRID STYLES
@@ -8413,7 +8425,7 @@ MEDIA QUERIES
   .quarter-width,
   .third-width,
   .half-width {
-    width: 100%;
+    width: 50%;
   }
   /* = PROJECTS
 	-------------------------------------------------------------- */
@@ -8428,18 +8440,19 @@ MEDIA QUERIES
     text-align: center;
   }
   .filter {
-    padding: 32px 0 0;
+    padding: 0 0 0;
     margin: 0 auto;
     text-align: center;
     float: none;
   }
   .block-grid.columns-2 .block-item, .block-grid.columns-3 .block-item, .block-grid.columns-4 .block-item {
-    padding-right: 0 !important;
+    padding-right: 0 ;
   }
   .block-grid.columns-2 .block-item h1, .block-grid.columns-3 .block-item h1, .block-grid.columns-4 .block-item h1 {
-    font-size: 350%;
+    font-size: 280%;
     max-width: 300px;
   }
+ 
   /* = PAGINATION
 	-------------------------------------------------------------- */
   .projects-pagination .prev-nav {
@@ -8502,6 +8515,12 @@ MEDIA QUERIES
   .blog_content.shortcode.col-3 .hentry:nth-child(3n) {
     margin-right: 0;
   }
+  .blog_content.shortcode.col-4 .hentry {
+    width: 48%;
+  }
+  .blog_content.shortcode.col-4 .hentry:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -8513,11 +8532,18 @@ MEDIA QUERIES
   /* = PROJECTS
 	-------------------------------------------------------------- */
   .block-grid.columns-2 .block-item, .block-grid.columns-3 .block-item, .block-grid.columns-4 .block-item {
-    padding-right: 0 !important;
+    padding-right: 0 ;
   }
   .block-grid.columns-2 .block-item h1, .block-grid.columns-3 .block-item h1, .block-grid.columns-4 .block-item h1 {
     font-size: 200%;
     max-width: 90%;
+  }
+  .block-grid.columns-3 .block-item:nth-child(1n), .block-grid.columns-4 .block-item:nth-child(1n) {
+    padding-right: 5px;
+    margin-bottom: 5px;
+  }
+  .block-grid.columns-3 .block-item:nth-child(2n), .block-grid.columns-4 .block-item:nth-child(2n) {
+    padding-right: 0;
   }
   /* = PAGINATION
 	-------------------------------------------------------------- */
@@ -8543,7 +8569,7 @@ MEDIA QUERIES
   /* = SHORTCODES
 	-------------------------------------------------------------- */
   .shortcode_list_images ul.two_col li, .shortcode_list_images ul.three_col li, .shortcode_list_images ul.four_col li {
-    width: 100%;
+    width: 50%;
   }
   .shortcode_price_table_holder.two_columns .shortcode_price_table,
   .shortcode_price_table_holder.three_columns .shortcode_price_table,
@@ -8562,7 +8588,7 @@ MEDIA QUERIES
   .footer .widget {
     padding-top: 4%;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }
 

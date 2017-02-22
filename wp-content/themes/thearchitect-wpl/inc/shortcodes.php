@@ -1603,6 +1603,12 @@ if ( !function_exists( 'shortcode_map' ) ) {
 	add_shortcode( 'map', 'shortcode_map' );
 
 }
+if ( !function_exists( 'shortcode_echo' ) ) {
+
+    function shortcode_echo ( $params = array(), $content = null ) {
+        return _x($content, '');
+    }
+}
 
 /**
  * Initialize all shortcodes
@@ -1639,6 +1645,7 @@ add_shortcode('map', 'shortcode_map');
 add_shortcode('divider', 'shortcode_divider');
 add_shortcode('padding', 'shortcode_padding');
 add_shortcode('spacer', 'shortcode_spacer');
+add_shortcode('echo', 'shortcode_echo');
 
 /**
  * Add Shortcode within the WP Editor
