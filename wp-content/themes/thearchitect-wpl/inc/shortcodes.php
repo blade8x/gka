@@ -1248,7 +1248,7 @@ if (!function_exists('shortcode_projects_list')) {
 
             $html .= "<div class='module-title wrap cf' style='padding:0 0 20px 0;'>";
                 $html .= "<div class='two_third'>";
-                    $html .= "<h3>$title</h3>";
+                    $html .= "<h2>$title</h2>";
                     if ($subtitle != "") { $html .= "<p>$subtitle</p>"; }
                 $html .= "</div>";
                 $html .= "<div class='one_third last'>";

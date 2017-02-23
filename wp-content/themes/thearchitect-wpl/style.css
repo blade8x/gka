@@ -3513,9 +3513,9 @@ p {
 .lead {
   display: block;
   color: #666666;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 400;
-  line-height: 150%;
+  /*line-height: 150%;*/
   margin: 0 0 72px;
 }
 
@@ -6101,9 +6101,9 @@ body.pace-done section#main {
 }
 
 .huge-title {
-  font-size: 72px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 62px;
+  /*line-height: 62px;*/
 }
 
 .hentry header {
@@ -6751,8 +6751,8 @@ img {
 -------------------------------------------------------------- */
 /* Module Title */
 .module-title {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 52px;
+  padding-bottom: 52px;
   /*background: transparent url("assets/images/bg_line_diag.png") no-repeat 50% 0;*/
 }
 
@@ -6812,14 +6812,14 @@ img {
   letter-spacing: 1px;
   text-decoration: none;
   color: #ffffff;
-  padding: 8px 32px;
+  padding: 7px 31px;
 }
 
 .filter ul li span {
   position: absolute;
   float: right;
   font-size: 17px;
-  line-height: 32px;
+  line-height: 28px;
   top: 4px;
   right: 15px;
   -webkit-transition: .1s ease-in-out;
@@ -6851,7 +6851,7 @@ img {
   display: none;
   position: absolute;
   right: 0;
-  top: 41px;
+  top: 38px;
   overflow: hidden;
   width: 205px;
   float: none;
@@ -7111,7 +7111,7 @@ body.search h1.archive-title span, body.archive h1.archive-title span {
 -------------------------------------------------------------- */
 .pagination,
 .wp-prev-next {
-  margin: 1.5em 0;
+  /*margin: 1.5em 0;*/
 }
 
 .pagination {
@@ -8221,27 +8221,29 @@ FlexSlider fit the look of the site
 }
 
 .flex-caption {
-  height: 100%;
+/*  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center;*/
 }
 
 .flex-caption h1 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  margin-left: 30px;
 }
 
 .flex-caption p {
-  margin: 40px 0px;
+  /*margin: 40px 0px;*/
+  margin-left: 32px;
 }
 
 .flex-button a {
   padding: 10px 30px;
   background: #000;
-  display: inline-block;
+  display: none;
   border-radius: 3px;
 }
 
@@ -8277,7 +8279,7 @@ FlexSlider fit the look of the site
     top: 20px;
   }
   .flex-caption h1 {
-    font-size: 18px;
+    font-size: 26px;
   }
   .flex-caption p {
     font-size: 15px;
@@ -8285,12 +8287,18 @@ FlexSlider fit the look of the site
   .flex-button a {
     padding: 10px 10px;
   }
+  p.lead {
+    font-size: 0.9em;
+  }
 }
 
 @media screen and (max-width: 640px) {
   .flex-caption p {
-    margin: 0px 20px 10px 20px;
+    /*margin: 0px 20px 10px 20px;*/
     font-size: 13px;
+  }
+  p.lead {
+    font-size: 0.9em;
   }
 }
 
@@ -8331,7 +8339,7 @@ MEDIA QUERIES
   .two_third,
   .one_fourth,
   .three_fourth {
-    width: 25%;
+    width: 50%;
     margin-bottom: 2%;
   }
   .one_third {
@@ -8343,8 +8351,8 @@ MEDIA QUERIES
   .custom-post-type-title,
   .entry-title,
   .huge-title {
-    font-size: 32px;
-    line-height: 120%;
+    font-size: 30px;
+    /*line-height: 120%;*/
   }
   body.single-projects .project-cover .line {
     margin: 10px 0;
@@ -8366,12 +8374,12 @@ MEDIA QUERIES
     background: none;
   }
   .module-title h3 {
-    font-size: 36px;
+    font-size: 30px;
     margin: 0 0 0.1em;
   }
   .module-title p {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 30px;
   }
   .block-grid.columns-3 .block-item, .block-grid.columns-4 .block-item {
     padding-right: 0;
@@ -8434,10 +8442,10 @@ MEDIA QUERIES
     background: none;
   }
   .module-title h3 {
-    text-align: center;
+    text-align: left;
   }
   .module-title p {
-    text-align: center;
+    text-align: left;
   }
   .filter {
     padding: 0 0 0;
@@ -8510,7 +8518,7 @@ MEDIA QUERIES
     margin-right: 0;
   }
   .blog_content.shortcode.col-3 .hentry {
-    width: 98%;
+    width: 48%;
   }
   .blog_content.shortcode.col-3 .hentry:nth-child(3n) {
     margin-right: 0;
