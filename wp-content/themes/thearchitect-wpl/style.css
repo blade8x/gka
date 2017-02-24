@@ -3914,6 +3914,7 @@ Stylesheet: Shortcodes Stylesheet
 .line.medium {
   width: 125px;
   height: 3px;
+  margin: 10px 0px;
 }
 
 .line.full {
@@ -7051,7 +7052,7 @@ body.single-projects #inner-content .sidebar .widget:first-child .widget-title {
 }
 
 .block-grid.columns-3 .block-item p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .block-grid.columns-4 .block-item:nth-child(4n) {
@@ -8346,11 +8347,11 @@ MEDIA QUERIES
   .two_third,
   .one_fourth,
   .three_fourth {
-    width: 50%;
+    width: 23.5%%;
     margin-bottom: 2%;
   }
   .one_third {
-    width: 50%;
+    width: 33%;
     margin-bottom: 2%;
   }
   .archive-title,
@@ -8434,6 +8435,9 @@ MEDIA QUERIES
   .three_fourth {
     width: 50%;
     margin-bottom: 2%;
+  }
+  .blog_content .one_half{
+      width: 100%;
   }
   /* = BLOCK GRID STYLES
 	-------------------------------------------------------------- */

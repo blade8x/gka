@@ -1335,7 +1335,7 @@ if (!function_exists('shortcode_projects_list')) {
                 $html .= "<div class='text ".$project_text_color."'>";
                     $html .= "<h1>".$title."</h1>";
                     $html .= "<span class='line medium ".$project_text_color."'></span>";
-                    $html .= "<p>";
+                    $html .= "<p style='color:#f47d28 !important'>";
                     if($terms) { $numTerms = count($terms); $i = 1;
 
                         foreach($terms as $term) {
