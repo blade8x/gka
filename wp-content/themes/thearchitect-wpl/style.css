@@ -5764,7 +5764,7 @@ p.wrap {
 /* = 3. LINK STYLES
 -------------------------------------------------------------- */
 a, a:visited {
-  color: #bb3e3e;
+  color: #f47d28;
   text-decoration: none;
   transition: color 0.4s;
   -moz-transition: color 0.4s;
@@ -5776,7 +5776,7 @@ a, a:visited {
 }
 
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #a83838;
+  color: #f47d28;
 }
 
 a:link, a:visited:link {
@@ -6185,6 +6185,7 @@ body.pace-done section#main {
   position: relative;
   width: 100%;
   background: #ffffff;
+  padding-left: 25px;
   /* image alignment */
 }
 
@@ -6199,7 +6200,7 @@ body.pace-done section#main {
 }
 
 .entry-content time {
-  color: #959595;
+  color: #f47d28;
   margin: 0;
   padding: 0;
 }
@@ -6530,13 +6531,15 @@ img {
 -------------------------------------------------------------- */
 .blog_content {
   width: 100%;
-  margin: 65px 0;
+  /*margin: 65px 0;*/
+  margin-top: 20px;
 }
 
 .blog_content .hentry {
-  border-bottom: 1px solid #f7f7f7;
-  margin-bottom: 72px;
+  /*border-bottom: 1px solid #f7f7f7;*/
+  /*margin-bottom: 72px;*/
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 .blog_content .hentry:last-child {
@@ -6585,7 +6588,7 @@ img {
 }
 
 .blog_content .post_image {
-  margin: 52px 0;
+  margin: 0px 0;
   overflow: hidden;
   height: auto;
 }
@@ -6595,6 +6598,10 @@ img {
 .blog_content .post_image img,
 .blog_content .post_text {
   position: relative;
+}
+.blog_content .entry-content .entry-title {
+    font-size: 24px;
+    margin: 0;
 }
 
 .blog_content .post_text {
@@ -7148,7 +7155,7 @@ body.search h1.archive-title span, body.archive h1.archive-title span {
 }
 
 .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-  color: #a83838;
+  color: #f47d28;
 }
 
 .pagination .current {
@@ -7196,7 +7203,7 @@ body.search h1.archive-title span, body.archive h1.archive-title span {
   font-size: 14px;
   display: inline-block;
   width: 100%;
-  color: #959595;
+  color: #f47d28;
 }
 
 .projects-pagination ul li a span, .projects-pagination ul li a:visited span {
@@ -8696,7 +8703,7 @@ Stylesheet: Print Stylesheet
     -ms-filter: none !important;
   }
   a, a:visited {
-    color: #444 !important;
+    color: #f47d28 !important;
     text-decoration: underline;
   }
   a:after, a:visited:after {
