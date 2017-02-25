@@ -68,7 +68,7 @@
         $newsURL = urlencode(get_permalink());
         $facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u='.$newsURL;
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> ">
                 <?php if ( has_post_thumbnail() ) { ?>
                 <div class="post_image one_half">
                         <a href="<?php the_permalink(); ?>" target="_self" title="<?php the_title_attribute(); ?>">
@@ -77,7 +77,7 @@
                 </div>
 		<?php } ?>
                 <div class="one_half last" style="<?php echo (!has_post_thumbnail())?'width:100%;':'' ?>">
-                    <div class="entry-content">
+                    <div class="entry-content news_list">
                             <?php if( is_sticky() ) { ?> 
                             <span class="sticky"><?php _e( 'Sticky Post', 'thearchitect-wpl' ); ?></span> &nbsp; <?php } ?>
                             <?php //the_category(', '); ?> 

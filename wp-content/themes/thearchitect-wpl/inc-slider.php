@@ -88,7 +88,7 @@
 
 <?php } elseif ( has_post_thumbnail() ) { ?>
 			
-	<div class="entry-header cf" style="height: <?php echo $page_featured_height; ?>">
+	<div class="entry-header cf" style="height: <?php echo $page_featured_height; ?>; margin-top:10px;">
 		
 		<?php if($page_featured_content) { ?>
 			<div class="inner">
@@ -98,10 +98,7 @@
 			</div>
 		<?php } ?>
 
-		<?php //the_post_thumbnail('full'); ?>
-                <div style="margin:0px;padding:0px;left:0px;width:100%;height:100%;overflow:hidden;position:absolute;">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1C4UP6GnqUzRmQsW5YN0ypx0HNoQ" style="width: 100%"  height="460"></iframe>
-                </div>
+		<?php the_post_thumbnail('full'); ?>
 	</div>
 
 <?php }

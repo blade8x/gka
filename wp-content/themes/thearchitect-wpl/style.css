@@ -5296,7 +5296,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 
 textarea {
-  max-width: 100%;
+  /*max-width: 100%;*/
   min-height: 120px;
   line-height: 1.5em;
 }
@@ -5310,8 +5310,8 @@ select {
 }
 
 label {
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 14px;
+  /*text-transform: uppercase;*/
   font-weight: bold;
   color: #959595;
 }
@@ -5347,6 +5347,20 @@ form.wpcf7-form span.wpcf7-not-valid-tip {
   font-weight: normal;
 }
 
+.contact_page label{
+    color: #f47d28;
+    font-size: 100%;
+}
+
+.contact_page h2, h5{
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-transform: none;
+}
+
+.contact_page h5{
+    font-size: 16px;
+}
 /******************************************************************
 
 Stylesheet: Animations Styles
@@ -5820,7 +5834,7 @@ h4, .h4 {
 h5, .h5 {
   font-size: 1em;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 h6, .h6 {
@@ -6186,7 +6200,7 @@ body.pace-done section#main {
   position: relative;
   width: 100%;
   background: #ffffff;
-  padding-left: 25px;
+  /*padding-left: 25px;*/
   /* image alignment */
 }
 
@@ -6393,6 +6407,10 @@ body.pace-done section#main {
 .entry-content .size-thumbnail {
   max-width: 100%;
   height: auto;
+}
+
+.entry-content.news_list{
+    padding-left: 25px;
 }
 
 /* end .entry-content */
@@ -7722,7 +7740,7 @@ div#respond-container #comments-title {
 }
 
 .footer .widget .textwidget .fa {
-  display: block;
+  /*display: block;*/
   color: #ffffff;
   font-size: 32px;
   margin: 0 0 18px 0;
@@ -8428,7 +8446,6 @@ MEDIA QUERIES
     padding-left: 0;
   }
   /* Columns  */
-  .one_half,
   .one_third,
   .two_third,
   .one_fourth,
@@ -8436,6 +8453,10 @@ MEDIA QUERIES
     width: 50%;
     margin-bottom: 2%;
   }
+  .one_half{
+       width: 100%;
+  }
+  
   .blog_content .one_half{
       width: 100%;
   }
@@ -8769,19 +8790,55 @@ Stylesheet: Print Stylesheet
     margin: 0em auto 0;
     color: #fff;
 }
-.your_choise_list{
+.your_choise_list, .your_choise_list_about{
     margin-bottom: 20px;
 }
-.your_choise_list div h5{
+.your_choise_list,.your_choise_list_about div h5{
     color: #f47d28;
     text-align: center;
-    height: 5px;
+    height: 15px;
 }
-.your_choise_list .choise_list{
+.your_choise_list,.your_choise_list_about .choise_list{
     margin-bottom: 10px;
 }
 .your_choise_list .choise_list div {
     color: #fff;
     text-align: center;
+}
+.your_choise_list_about .choise_list div {
+    color: #000;
+    text-align: center;
+}
+.your_choise_list_about .dotted_circle {
+    border: 2px dotted #f47d28;
+    padding: 2em;
+    height: 9em;
+    width: 9em;
+    border-radius: 7em;
+    text-align: center;
+    margin: 0em auto 0;
+    color: #000;
+}
+.green_earth{
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.green_earth img{
+    width: 120px;
+}
+.green_earth .slogan{
+    font-style: italic;
+    text-align: center;
+    display: inline-block;
+    border-top: solid 1px #f47d28;
+    border-bottom: solid 1px #f47d28;
+    width: 290px;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.green_earth .slogan span{
+    vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */
