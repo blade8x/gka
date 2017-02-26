@@ -8841,4 +8841,16 @@ Stylesheet: Print Stylesheet
 .green_earth .slogan span{
     vertical-align: middle;
 }
+.news_title{
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.news_title .entry-title{
+    font-size: 32px;
+    margin: 0px;
+}
+.news_title time{
+    color: #f47d28 !important;
+}
 /*# sourceMappingURL=style.css.map */

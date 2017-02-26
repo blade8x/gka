@@ -11,22 +11,19 @@
 
 
 <?php if ( is_single() ) { ?>
+        <div class="entry-header cf" style="height: 460px;">		
+            <?php if ( has_post_thumbnail() ) { ?>
+		<?php the_post_thumbnail('full'); ?>
+                <div class="news_title">
+                <time datetime="<?php echo get_the_date( 'c' ) ?>"><?php wplook_get_date(); ?></time>
+                <h5 class="entry-title"><?php the_title(); ?></h5>
+                </div>
+            <?php }?>
+        </div>
+
+    <div class="wrap">
+        <div class="m-all t-2of3 d-5of7">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		<div class="entry-header">
-			<?php the_category(', '); ?> <span class="sep">/</span>
-
-			<time datetime="<?php echo get_the_date( 'c' ) ?>"><?php wplook_get_date(); ?></time>
-			<h3 class="entry-title"><?php the_title(); ?></h3>
-		</div>
-
-		<?php if ( has_post_thumbnail() ) { ?>
-			<div class="post_image">
-				<a href="<?php the_permalink(); ?>" target="_self" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail('blog'); ?>
-				</a>
-			</div>
-		<?php } ?>
 
 		<div class="post_text entry-content">
 			<?php the_content(); ?>
@@ -62,6 +59,11 @@
 			</div>
 		<?php } ?>
 	</article>
+        </div>
+        <div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 cf" role="complementary">
+                <?php get_sidebar(); ?>
+        </div>
+    </div>
 
 <?php } else { 
         // Get current page URL 
