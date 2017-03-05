@@ -1549,6 +1549,44 @@ if (!function_exists('shortcode_posts_list')) {
     }
 }
 
+// [posts_list]
+if (!function_exists('shortcode_related_projects')) {
+    function shortcode_related_projects($atts, $content = null) {
+        $html = '';
+        $orig_post = $post;
+        global $post;
+        $categories = get_the_terms($post->ID, 'projects_cat');
+        if ($categories) {
+            $category_ids = array();
+            foreach ($categories as $individual_category)
+                $category_ids[] = $individual_category->term_id;
+            $args = array(
+                'projects_cat__in' => $category_ids,
+                'post__not_in' => array($post->ID),
+                'posts_per_page' => 3, // Number of related posts that will be shown.
+                'caller_get_posts' => 1,
+                'post_type' => 'projects'
+            );
+            $my_query = new wp_query($args);
+            if ($my_query->have_posts()) {
+                $html .= '<div id="related_projects" class="wrap"><h3>Related Posts</h3>';
+                $html .= '<div class="chpcs_image_carousel">';
+                $html .='<div id="wa_chpc_slider" style="height:400 px; overflow: hidden;">';
+                while ($my_query->have_posts()) {
+                    $my_query->the_post();
+                    $html .= '<div class="chpcs_foo_content" style="width:400px; height:400px;">
+                        <span class="chpcs_img"><a href="'. get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_post_thumbnail(get_the_ID(),['740', '200']) . '</a></span>                           
+                    </div> ';
+                }
+                $html .= '</div></div></div></div>';
+            }
+        }
+        $post = $orig_post;
+        wp_reset_query();
+        return $html;
+    }
+}
+
 // [line]
 if (!function_exists('shortcode_line')) {
     function shortcode_line($params = array(), $content = null) {
@@ -1646,6 +1684,7 @@ add_shortcode('divider', 'shortcode_divider');
 add_shortcode('padding', 'shortcode_padding');
 add_shortcode('spacer', 'shortcode_spacer');
 add_shortcode('echo', 'shortcode_echo');
+add_shortcode('related_projects', 'shortcode_related_projects');
 
 /**
  * Add Shortcode within the WP Editor

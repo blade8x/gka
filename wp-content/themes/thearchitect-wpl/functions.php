@@ -367,3 +367,41 @@ function create_shortcode_copyright() {
 add_shortcode('copyright', 'create_shortcode_copyright');
 
 remove_filter( 'the_content', 'wpautop' );
+
+// get project by location
+// array of filters (field key => field name)
+$GLOBALS['my_query_filters'] = array( 
+    'field_1'	=> 'location', 
+);
+add_action('pre_get_posts', 'pre_get_projects', 9, 1);
+function pre_get_projects( $query ) {
+    // bail early if is in admin
+    if( is_admin() ) return;
+
+    // bail early if not main query
+    // - allows custom code / plugins to continue working
+    if( !$query->is_main_query() ) return;
+
+    // get meta query
+    $meta_query = $query->get('meta_query',[]);
+
+    // loop over filters
+    foreach( $GLOBALS['my_query_filters'] as $key => $name ) {
+        // continue if not found in url
+        if( empty($_GET[ $name ]) ) {
+                continue;
+        }
+        // get the value for this filter
+        // eg: http://www.website.com/events?city=melbourne,sydney
+        $value = trim($_GET[ $name ]);
+        if($name == 'location') $name = 'sbwp_project_location';
+        // append meta query
+        $meta_query[] = array(
+            'key'		=> $name,
+            'value'		=> $value,
+            'compare'           => '='
+        );
+    } 
+    // update meta query
+    $query->set('meta_query', $meta_query);
+}

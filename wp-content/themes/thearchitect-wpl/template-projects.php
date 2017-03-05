@@ -46,6 +46,26 @@
 								</ul>
 							</li>
 						</ul>
+                                                <?php
+                                                // get meta location
+                                                global $wpdb;
+                                                $pr_locations = $wpdb->get_results( "SELECT * FROM `wp_postmeta` WHERE `meta_key` = 'sbwp_project_location' GROUP BY `meta_value`" );
+                                                if(!empty($pr_locations)){
+                                                ?>
+                                                <ul>
+                                                    <li><a href=""><?php _e('By locations', 'thearchitect-wpl'); ?> <span>&rsaquo;</span></a>
+                                                    <ul class="locations">
+                                                <?php
+                                                    foreach($pr_locations as $pr_location){
+                                                        echo "<li><a href='".esc_url( add_query_arg(['location'=>$pr_location->meta_value]) )."' title='" . sprintf( __( "View all projects in %s", 'thearchitect-wpl' ), $pr_location->meta_value ) . "'>" . $pr_location->meta_value . "</a></li>";
+                                                    }
+                                                ?>
+                                                    </ul>
+                                                </li>
+                                                </ul>
+                                                <?php
+                                                }
+                                                ?>
 					</div>
 				</div>
 			</div>
