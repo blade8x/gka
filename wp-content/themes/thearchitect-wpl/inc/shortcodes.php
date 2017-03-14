@@ -16,7 +16,8 @@ if (!function_exists('shortcode_row')) {
             'padding' => '',
             'wrap' => 'false',
             'parallax' => 'false',
-            'height' => ''
+            'height' => '',
+            'margin' => ''
         ), $params));
 
         // init variables
@@ -50,6 +51,10 @@ if (!function_exists('shortcode_row')) {
 
         if($padding != "") {
             $style .= "padding: ".$padding.";";
+        }
+        
+        if($margin != "") {
+            $style .= "margin: ".$margin.";";
         }
 
         if($parallax != "false") {
@@ -443,7 +448,7 @@ if(!function_exists('shortcode_list_images')) {
         $html = "";
         $content = do_shortcode($content);
 
-        $html .= '<div class="shortcode_list_images" style="padding-bottom:25px">';
+        $html .= '<div class="shortcode_list_images" >';
         $html .= '<ul class="'.$columns.'_col">';
         $html .= ''.$content.'';
         $html .= '</ul>';
@@ -1241,14 +1246,14 @@ if (!function_exists('shortcode_projects_list')) {
         // init variables
         $html = "";
         $root = ot_get_option('wpl_projects_page');
-        $browseall = __('All Projects', 'thearchitect-wpl');
+        $browseall = __('ALL PROJECTS', 'thearchitect-wpl');
         $cattitle = __('By sectors', 'thearchitect-wpl');
 
         if ($title != "") {
 
-            $html .= "<div class='module-title wrap cf' style='padding:0 0 20px 0;'>";
+            $html .= "<div class='module-title wrap cf module-project-title' style='padding:0 0 20px 0;'>";
                 $html .= "<div class='two_third'>";
-                    $html .= "<h2>$title</h2>";
+                    $html .= "<h2 style='height:18px;'>$title</h2>";
                     if ($subtitle != "") { $html .= "<p>$subtitle</p>"; }
                 $html .= "</div>";
                 $html .= "<div class='one_third last'>";
@@ -1267,7 +1272,16 @@ if (!function_exists('shortcode_projects_list')) {
                         }
                         $html .= "</ul></li>";
                         $html .= "</ul>";
-
+                        global $wpdb;
+                        $pr_locations = $wpdb->get_results( "SELECT * FROM `wp_postmeta` WHERE `meta_key` = 'sbwp_project_location' GROUP BY `meta_value`" );
+                        if(!empty($pr_locations)){
+                            $html .= '<ul><li><a href="">'. __('By locations', 'thearchitect-wpl'). '<span>&rsaquo;</span></a>
+                                        <ul class="locations">';
+                            foreach($pr_locations as $pr_location){
+                                $html .= "<li><a href='".esc_url( add_query_arg(['location'=>$pr_location->meta_value], '/projects') )."' title='" . sprintf( __( "View all projects in %s", 'thearchitect-wpl' ), $pr_location->meta_value ) . "'>" . $pr_location->meta_value . "</a></li>";
+                            }
+                            $html .= '</ul></li></ul>';
+                        }
                     $html .= "</div>";
 
                 }
@@ -1324,7 +1338,7 @@ if (!function_exists('shortcode_projects_list')) {
             $link = get_permalink();
             $post_featured_image = get_post_thumbnail_id(get_the_ID());
             if ($post_featured_image) {
-                $project_thumbnail = wp_get_attachment_image_src( $post_featured_image, 'full', false);
+                $project_thumbnail = wp_get_attachment_image_src( $post_featured_image, 'blog', false);
                 if ($project_thumbnail) (string)$project_thumbnail = $project_thumbnail[0];
             }
 
@@ -1335,7 +1349,7 @@ if (!function_exists('shortcode_projects_list')) {
                 $html .= "<div class='text ".$project_text_color."'>";
                     $html .= "<h1>".$title."</h1>";
                     $html .= "<span class='line medium ".$project_text_color."'></span>";
-                    $html .= "<p style='color:#f47d28 !important'>";
+                    $html .= "<p style='color:#f6921e !important'>";
                     if($terms) { $numTerms = count($terms); $i = 1;
 
                         foreach($terms as $term) {

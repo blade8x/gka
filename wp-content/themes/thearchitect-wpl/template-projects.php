@@ -22,9 +22,9 @@
 		<?php $wp_query = new WP_Query( $args ); ?>
 			<?php if ( $wp_query->have_posts() ) : ?>
 
-			<div class="module-title wrap cf" style="padding: 20px 0 20px 0;">
+			<div class="module-title wrap cf module-project-title" style="padding: 20px 0 20px 0;">
 				<div class="two_third">
-					<h2><?php the_title(); ?></h2>
+					<h2 class="uppercase"><?php the_title(); ?></h2>
 					<?php if ( $page_excerpt != '') { ?>
 						<p><?php echo $page_excerpt; ?></p>
 					<?php } ?>
@@ -100,7 +100,7 @@
 								<div class="text <?php echo $project_text_color; ?>">
 									<h1><?php the_title(); ?></h1>
 									<span class="line medium <?php echo $project_text_color; ?>"></span>
-									<p>
+									<p style='color: #f6921e !important;'>
 									<?php
 										if($terms) { $numTerms = count($terms); $i = 1;
 											foreach($terms as $term) {

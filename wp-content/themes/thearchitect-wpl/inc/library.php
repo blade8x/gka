@@ -556,7 +556,7 @@ if ( ! function_exists( 'wplook_print_custom_color_style' ) ) {
 			input[type="submit"]:hover, input[type="submit"]:focus { background-color: <?php echo $accent_color; ?>; }
 
 			.nav > li ul.sub-menu, .nav > li ul.children,
-			.block-title, .filter ul li:hover, .filter ul li ul.sectors, .filter ul li ul.locations,
+			.block-title, .filter ul li ul.sectors, .filter ul li ul.locations,
 			.filter ul li ul.sectors li a, .filter ul li ul.locations li a, 
                         .filter ul li ul.sectors li a:visited, .filter ul li ul.locations li a:visited, 
                         .flex-button a:hover { background: <?php echo $accent_color; ?>; }

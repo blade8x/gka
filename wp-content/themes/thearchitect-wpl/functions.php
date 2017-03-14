@@ -99,12 +99,14 @@ if ( ! function_exists( 'wplook_setup' ) ) {
 
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'thumb-1280', 1280, 9999, true );
-		add_image_size( 'blog', 1280, 500, true );
+		add_image_size( 'slider', 1280, 500, true );
+		add_image_size( 'blog', 780, 650, true );
 
 		function sbwp_custom_image_sizes( $sizes ) {
 			return array_merge( $sizes, array(
 				'thumb-1280' => __('1280px wide', 'thearchitect-wpl'),
-				'blog' => __('1280px by 500px', 'thearchitect-wpl'),
+				'slider' => __('1280px by 500px', 'thearchitect-wpl'),
+				'blog' => __('780px wide', 'thearchitect-wpl'),
 			));
 		}
 		add_filter( 'image_size_names_choose', 'sbwp_custom_image_sizes' );
@@ -357,11 +359,11 @@ if ( ! function_exists( 'wplook_admin_header_image' ) ) {
 // Enable shortcodes in widgets
 add_filter('widget_text', 'do_shortcode');
 function create_shortcode_copyright() {
-    $txt = '<p>';
+    $txt = '<div class="copyright">';
     if ( ot_get_option('wpl_copyright') ) { 
         $txt .= ot_get_option('wpl_copyright'); 
     }
-    $txt .= '</p>';
+    $txt .= '</div>';
     return $txt;
 }
 add_shortcode('copyright', 'create_shortcode_copyright');
