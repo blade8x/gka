@@ -6623,6 +6623,7 @@ img {
 .blog_content .entry-content .entry-title {
     font-size: 24px;
     margin: 0;
+    font-weight: lighter;
 }
 
 .blog_content .post_text {
@@ -7620,6 +7621,7 @@ div#respond-container #comments-title {
 
 .footer #inner-footer {
   color: #959595;
+  padding-top: 10px;
 }
 
 .footer .widget {
@@ -7749,12 +7751,20 @@ div#respond-container #comments-title {
 }
 
 .footer .widget .textwidget p {
-  margin: 0 0 5px;
   color: #fff;
+  margin: 0px;
 }
 
-.footer .widget .textwidget p.adr {
-  margin-bottom: 0px;
+.footer .widget .textwidget div {
+  margin-bottom: 5px;
+}
+
+.footer .widget h2.widgettitle{
+    margin-bottom: 10px
+}
+
+.footer .widget h5.widgettitle{
+    margin-bottom: 12px
 }
 
 .footer .widget .textwidget label {
@@ -8394,11 +8404,14 @@ MEDIA QUERIES
   /* = LAYOUT & GRID STYLES
 	-------------------------------------------------------------- */
   /* Columns  */
-  .one_half,
   .two_third,
   .one_fourth,
   .three_fourth {
-    width: 23.5%%;
+    width: 23.5%;
+    margin-bottom: 2%;
+  }
+  .one_half{
+    width: 50%;
     margin-bottom: 2%;
   }
   .one_third {
@@ -8616,6 +8629,9 @@ MEDIA QUERIES
     padding: 0;
     width: 100%;
   }
+  .entry-content.news_list{
+        padding-left: 0px; 
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -8712,7 +8728,7 @@ MEDIA QUERIES
   /* = TYPOGRAPHY
 	-------------------------------------------------------------- */
   body {
-    font-size: 80%;
+    font-size: 100%;
     line-height: 1.5em;
     margin: 12px;
   }
@@ -8868,6 +8884,12 @@ Stylesheet: Print Stylesheet
     margin: 0em auto 0;
     color: #fff;
 }
+@media screen and (max-width: 320px) {
+    .one_third, .two_third, .one_fourth, .three_fourth {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+}
 .your_choise_list, .your_choise_list_about{
     margin-bottom: 20px;
 }
@@ -8965,23 +8987,23 @@ Stylesheet: Print Stylesheet
     
     
     .footer .widget .menu-footer-menu-container{
-        height: calc(100% - 13px);
+        height: calc(100% - 21px);
     }
     .footer .widget .menu-projects-by-category-container{
-         height: calc(100% - 13px);
+         height: calc(100% - 21px);
     }
     #inner-footer{
         display: flex;
     }
     .footer .widget #menu-footer-menu,
     .footer .widget #menu-projects-by-category{
-        height: calc(100% - 13px);
+        height: calc(100% - 21px);
         display: flex !important;
         flex-direction: column;
         justify-content: space-between;
     }
     .footer .textwidget{
-        height: calc(100% - 37px);
+        height: calc(100% - 42px);
     }
     .footer form {
         display: flex;
@@ -9078,4 +9100,5 @@ Stylesheet: Print Stylesheet
 .uppercase{
     text-transform: uppercase;
 }
+
 /*# sourceMappingURL=style.css.map */
