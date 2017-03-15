@@ -87,9 +87,9 @@
 		a = jQuery(".third-width").width(),
 		o = jQuery(".half-width").width();
 	$(".full-height").height(e - 100);
-	$(".quarter-height").height(b - 100);
-	$(".third-height").height(a - 100);
-	$(".half-height").height(o - 100);
+	$(".quarter-height").height(b - 50);
+	$(".third-height").height(a - 50);
+	$(".half-height").height(o - 50);
 
 	$imageContainerLinks.each(function () {
 		jQuery(this).addClass("fresco");
