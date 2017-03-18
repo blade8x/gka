@@ -1352,14 +1352,15 @@ if (!function_exists('shortcode_projects_list')) {
                     $html .= "<p style='color:#f6921e !important'>";
                     if($terms) { $numTerms = count($terms); $i = 1;
 
-                        foreach($terms as $term) {
-                            $html .= "$term->name";
-                        if($i < $numTerms)
-                            $html .= ", ";
-                        $i++; }
+//                        foreach($terms as $term) {
+//                            $html .= "$term->name";
+//                            if($i < $numTerms)
+//                                $html .= ", ";
+//                            $i++; 
+//                        }
                     };
                     if($project_location) {
-                        $html .= ", $project_location";
+                        $html .= "$project_location";
 
                     }
                     $html .= "</p>";
@@ -1589,7 +1590,7 @@ if (!function_exists('shortcode_related_projects')) {
                 while ($my_query->have_posts()) {
                     $my_query->the_post();
                     $html .= '<div class="chpcs_foo_content" style="width:400px; height:400px;">
-                        <span class="chpcs_img"><a href="'. get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_post_thumbnail(get_the_ID(),['740', '200']) . '</a></span>                           
+                        <span class="chpcs_img"><a href="'. get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_post_thumbnail(get_the_ID(),'blog') . '</a></span>                           
                     </div> ';
                 }
                 $html .= '</div></div></div></div>';

@@ -24,7 +24,7 @@
 		$body.addClass('pace-done');
 	},500);
 	$('.project-cover img').sbwpBackStretch('body');
-	$('.entry-header img').sbwpBackStretch('.entry-header');
+//	$('.entry-header img').sbwpBackStretch('.entry-header');
   }
 
   /**
