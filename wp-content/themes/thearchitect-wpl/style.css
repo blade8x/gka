@@ -4902,7 +4902,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-size: 12px;
   height: 36px;
   line-height: 36px;
-  padding: 0 12px;
+  padding: 0 6px;
 }
 
 .btn.medium, .medium.accent-btn, input.medium[type="submit"], .comment-respond .medium#submit {
@@ -5346,20 +5346,29 @@ form.wpcf7-form span.wpcf7-not-valid-tip {
   text-transform: none;
   font-weight: normal;
 }
-
+.contact_page{
+    padding-left: 20px;
+}
+@media only screen and (max-width: 768px) {
+    .contact_page{
+        padding-left: 0;
+    }
+}
 .contact_page label{
     color: #f6921e;
     font-size: 100%;
+    font-weight: lighter;
 }
 
-.contact_page h2, h5{
+.contact_page h2{
     margin-bottom: 10px;
-    margin-top: 15px;
     text-transform: none;
 }
-
 .contact_page h5{
-    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: none;
+    font-size: 20px;
 }
 /******************************************************************
 
@@ -7487,7 +7496,7 @@ div#respond-container #comments-title {
 
 .widgettitle {
   padding: 0;
-  margin: 0 0 4% 0;
+  margin: 0 0 2% 0;
 }
 
 .widget {
@@ -8514,8 +8523,8 @@ MEDIA QUERIES
        width: 100%;
   }
   .module-project-title .two_third {
-    width: 100%;
-    margin-bottom: 0%;
+    width: 100% !important;
+    margin-bottom: 0% !important;
     text-align: center;
   }
   .blog_content .one_half{
@@ -8643,6 +8652,8 @@ MEDIA QUERIES
   .entry-content.news_list{
         padding-left: 0px; 
   }
+  
+  
 }
 
 @media only screen and (max-width: 480px) {
@@ -8885,20 +8896,13 @@ Stylesheet: Print Stylesheet
     background: #959595;
 }
 
-.dotted_circle{
-    border: 2px dotted #f6921e;
-    padding: 45px 15px;
-    height: 10em;
-    width: 10em;
-    border-radius: 7em;
-    text-align: center;
-    margin: 0em auto 0;
-    color: #fff;
-}
 @media screen and (max-width: 320px) {
     .one_third, .two_third, .one_fourth, .three_fourth {
         width: 100%;
         margin-bottom: 2%;
+    }
+    .your_choise_list_about .choise_list{
+        width: 100% !important;
     }
 }
 .your_choise_list, .your_choise_list_about{
@@ -8907,7 +8911,7 @@ Stylesheet: Print Stylesheet
 .your_choise_list,.your_choise_list_about div h5{
     color: #f6921e;
     text-align: center;
-    height: 15px;
+    margin: 10px 0;
 }
 .your_choise_list .choise_list{
     margin-bottom: 10px;
@@ -8924,6 +8928,16 @@ Stylesheet: Print Stylesheet
     color: #000;
     text-align: center;
 }
+.dotted_circle{
+    border: 2px dotted #f6921e;
+    padding: 45px 15px;
+    height: 10em;
+    width: 10em;
+    border-radius: 7em;
+    text-align: center;
+    margin: 0em auto 0;
+    color: #fff;
+}
 .your_choise_list_about .dotted_circle {
     border: 2px dotted #f6921e;
     padding: 45px 15px;
@@ -8933,6 +8947,25 @@ Stylesheet: Print Stylesheet
     text-align: center;
     margin: 0em auto 0;
     color: #000;
+}
+@media screen and (max-width: 768px) {
+    .your_choise_list_about .dotted_circle {
+        padding: 40px 15px;
+        height: 9em;
+        width: 9em;
+    }
+    .shortcode_list_images ul li:nth-child(2n+1) img{
+        padding-right: 5px;
+    }
+    .shortcode_list_images ul li:nth-child(2n) img{
+        padding-left: 5px;
+    }
+    h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{
+        margin: 15px 0;
+    }
+    .your_choise_list_about .choise_list{
+        width: 100%;
+    }
 }
 .green_earth{
     text-align: center;
@@ -8957,9 +8990,9 @@ Stylesheet: Print Stylesheet
     vertical-align: middle;
 }
 .news_title{
-    position: relative;
-    left: 60px;
-    top: 50px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
 }
 .news_title .entry-title{
     font-size: 32px;
@@ -8967,6 +9000,20 @@ Stylesheet: Print Stylesheet
 }
 .news_title time{
     color: #f6921e !important;
+}
+@media screen and (max-width: 480px) {
+    .news_title{
+        left: 10px;
+        top: 10px;
+    }
+    .news_title .entry-title{
+        font-size: 14px;
+        margin: 0px;
+    }
+    .news_title time{
+        color: #f6921e !important;
+        font-size: 12px;
+    }
 }
 @media screen and (min-width: 769px) {
     .shortcode_list_images ul.four_col li{
@@ -9075,15 +9122,20 @@ Stylesheet: Print Stylesheet
     padding: 0px;
 }
 @media only screen and (max-width: 768px) {
-    .subcribe_container {
+    .subcribe_container{
         overflow: hidden;
     }
+    .copyright_container {
+        overflow: hidden;
+        margin-bottom: 0px !important;
+    }   
     .subcribe_container .subcribe_input{
         width: 80%;
         float: left;
     }
     .subcribe_container .subcribe_input input{
         max-width: 100%;
+        margin-bottom: 0px;
     } 
     .subcribe_container .subcribe_button{
         width: 20%;
@@ -9095,8 +9147,17 @@ Stylesheet: Print Stylesheet
         float: right;
     }    
     .footer .copyright{
-        height: 50px;
-        line-height: 50px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .copyright_container .copyright {
+        width: 80%;
+        float: left;
+    }
+    .copyright_container .social {
+        width: 20%;
+        float: left;
+        padding-left: 10px;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -9108,6 +9169,13 @@ Stylesheet: Print Stylesheet
     }
     .subcribe_container .subcribe_button input{
         font-size: 14px;
+    }
+    
+    .copyright_container .copyright {
+        width: 70%;
+    }
+    .copyright_container .social {
+        width: 30%;
     }
 }
 .playbtnCss { 
@@ -9135,6 +9203,11 @@ Stylesheet: Print Stylesheet
     }
     .module-project-title .one_third {
         width: 50%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .page-id-17 .entry-header img{
+        content: url('/wp-content/uploads/2017/03/map-mobi.png');
     }
 }
 /*# sourceMappingURL=style.css.map */

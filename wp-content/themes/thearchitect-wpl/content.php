@@ -11,7 +11,7 @@
 
 
 <?php if ( is_single() ) { ?>
-        <div class="entry-header cf" style="height: 460px;">		
+        <div class="entry-header cf" style="height: auto;">		
             <?php if ( has_post_thumbnail() ) { ?>
 		<?php the_post_thumbnail('full'); ?>
                 <div class="news_title">
