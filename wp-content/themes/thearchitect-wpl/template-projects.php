@@ -102,16 +102,16 @@
 									<span class="line medium <?php echo $project_text_color; ?>"></span>
 									<p style='color: #f6921e !important;'>
 									<?php
-										if($terms) { $numTerms = count($terms); $i = 1;
-											foreach($terms as $term) {
-												echo "$term->name";
-											if($i < $numTerms)
-												echo ", ";
-											$i++; }
-										};
-										if( $terms && $project_location ) {
-											echo ", ";
-										}
+//										if($terms) { $numTerms = count($terms); $i = 1;
+//											foreach($terms as $term) {
+//												echo "$term->name";
+//											if($i < $numTerms)
+//												echo ", ";
+//											$i++; }
+//										};
+//										if( $terms && $project_location ) {
+//											echo ", ";
+//										}
 										if($project_location) {
 											echo $project_location;
 										}

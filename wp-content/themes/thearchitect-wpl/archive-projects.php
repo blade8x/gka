@@ -16,7 +16,7 @@ $layout = ot_get_option('wpl_projects_cat_layout');
 
     <div class="m-all t-all d-all">
         
-        <div class="module-title wrap cf" style="padding: 20px 0 20px 0;">
+        <div class="module-title wrap cf module-project-title" style="padding: 20px 0 20px 0;">
             <div class="two_third">
                 <?php
                 $cat_title = single_cat_title('', false);
@@ -129,21 +129,21 @@ $layout = ot_get_option('wpl_projects_cat_layout');
                         <div class="text <?php echo $project_text_color; ?>">
                             <h1><?php the_title(); ?></h1>
                             <span class="line medium <?php echo $project_text_color; ?>"></span>
-                            <p>
+                            <p style='color: #f6921e !important;'>
                                 <?php
-                                if ($terms) {
-                                    $numTerms = count($terms);
-                                    $i = 1;
-                                    foreach ($terms as $term) {
-                                        echo "$term->name";
-                                        if ($i < $numTerms)
-                                            echo ", ";
-                                        $i++;
-                                    }
-                                }
-                                if ($terms && $project_location) {
-                                    echo ", ";
-                                }
+//                                if ($terms) {
+//                                    $numTerms = count($terms);
+//                                    $i = 1;
+//                                    foreach ($terms as $term) {
+//                                        echo "$term->name";
+//                                        if ($i < $numTerms)
+//                                            echo ", ";
+//                                        $i++;
+//                                    }
+//                                }
+//                                if ($terms && $project_location) {
+//                                    echo ", ";
+//                                }
                                 if ($project_location) {
                                     echo $project_location;
                                 }
